@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}
+* {box-sizing: border-box;margin: 0; padding: 0; font-weight: normal;}
+*::before {box-sizing: border-box;}
+*::after {box-sizing: border-box;}
+body {
+  font-size: 16px;
+  background: #00020b;
+}
+
+#root {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.App {
+  flex: 1
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+}
+
+
+.home {
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  background: #010310; color: white;
+}
+
+/* @function px($n){
+  @return $n / 2420 * 100rem;
+} */
+
+.header {
+  background-image: url('./static/images/project/header.png');
+  background-size: cover;
+  /* height:99/2420*100rem; */
+  height: 4.090rem;
+  width: 100%;
+}
+
+main {
+  padding-top: 1.239rem;
+  flex: 1;
+    display: grid;
+    grid-template:
+      "box1 box2 box4 box5" 755fr
+      "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
+      grid-column-gap: 1.157rem;
+      grid-row-gap: 1.157rem;
+}
+
+section {text-align: center;}
+.bordered {
+  border: 1px solid #0764bc;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
+  background: #0c1139;
+  
+}
+.bordered::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 4px;
+  box-shadow: 17px 0 0 -16px #0e325f,
+  -17px 0 0 -16px #0e325f,
+  0 17px 0 -16px #0e325f,
+  0 -17px 0 -16px #0e325f,
+  9px 0 0 -8px #0d4483,
+  -9px 0 0 -8px #0d4483,
+  0 9px 0 -8px #0d4483,
+  0 -9px 0 -8px #0d4483,;
+}
+
+ .section1 {
+  grid-area: box1;
+}
+ .section2 {
+  grid-area: box2;
+}
+ .section3 {
+  grid-area: box3;
+}
+ .section4 {
+  grid-area: box4;
+}
+ .section5 {
+  grid-area: box5;
+}
+
+.statistics {
+  height: 13.016rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+}
+
+.statistics h2 {
+  flex-shrink: 0;
+  border: 1px solid #0a5299;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-size: 0.909rem;
+  line-height: 0.910rem;
+  padding: 10px 28px;
+  text-shadow: 0 0 3px white;
+}
+.statistics .chart{
+  flex: 1;
+  width: 100%;
+}

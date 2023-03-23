@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大屏幕展示</title>
+  <script>
+    const clientWidth = document.documentElement.clientWidth
+    const clientHeight = document.documentElement.clientHeight
+    window.pageWidth = clientWidth / clientHeight > 16 / 9 ? clientHeight * (16 / 9) : clientWidth
+    const pageHeight = pageWidth / (16 / 9)
+    const string = `<style>html{
+      font-size: ${pageWidth / 100}px
+    }</style>`
+    document.write(string)
+  </script>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div id="root">
+      <div class="home">
+        <header class="header"></header>
+        <main>
+          <section class="section1">
+          <div class="bordered statistics">
+            <h2>案发派出所管辖统计</h2>
+            <div id="chart" class="chart">
+
+            </div>
+          </div>
+        </section>
+        <section class="bordered section2"></section>
+        <section class="bordered section3"></section>
+        <section class="bordered section4"></section>
+        <section class="bordered section5"></section>
+
+        </main>
+      
+      </div>
+  </div>
+</body>
+
+<script>
+  root.style.width = pageWidth + 'px'
+  root.style.height = pageHeight + 'px'
+  root.style.marginTop = (clientHeight - pageHeight) / 2 + 'px'
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.1/echarts.min.js"></script>
+<script src="./main.js"></script>
+</html>
